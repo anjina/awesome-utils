@@ -1,0 +1,12 @@
+{
+  "name": "vue-router",
+  "version": "1.0.0",
+  "description": "简易Vue Router实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

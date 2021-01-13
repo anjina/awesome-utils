@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module">
+    import VueRouter from '../index.js';
+
+    Vue.use(VueRouter);
+
+    const Foo = {
+      template: `
+    <div>
+      <div>i am foo</div>
+      <router-link to="/bar">to bar</router-link>
+      <router-link to="/">to home</router-link>  
+    </div>
+  `
+    }
+
+    const Home = {
+      template: `
+    <div>
+      <div>i am home</div>
+      <router-link to="/bar">to bar</router-link>
+      <router-link to="/foo">to foo</router-link>  
+    </div>
+  `,
+    }
+
+    const Bar = {
+      template: `
+    <div>
+      <div>i am bar</div>
+      <router-link to="/foo">to foo</router-link>
+      <router-link to="/">to home</router-link>  
+    </div>
+  `
+    }
+
+    const routes = [{
+      path: '/',
+      component: Home,
+    },
+    {
+      path: '/foo',
+      component: Foo,
+    },
+    {
+      path: '/bar',
+      component: Bar,
+    }
+    ];
+
+    const router = new VueRouter({
+      routes
+    });
+
+    const vm = new Vue({
+      el: '#app',
+      template: `<router-view />`,
+      router,
+    });
+  </script>
+</body>
+
+</html>
