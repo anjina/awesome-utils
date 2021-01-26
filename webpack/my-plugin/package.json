@@ -1,0 +1,19 @@
+{
+  "name": "my-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {
+    "jszip": "^3.5.0"
+  }
+}
